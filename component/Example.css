@@ -1,0 +1,12 @@
+.myCard{
+    border-radius: 16px;
+    box-shadow: 0px 1px 6px rgba(0,0,0,0.08);
+    padding: 24px;
+}
+.myTitle{
+   font-family: "Poppins, 18–20px, Semi-bold, #475569"
+}
+.myText{
+       
+    font-family: "Inter / Poppins, 14–16px, Regular, #334155";
+}
