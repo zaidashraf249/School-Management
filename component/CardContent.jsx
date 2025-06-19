@@ -1,40 +1,47 @@
 import React from "react";
-import { ProgressBar } from "react-bootstrap";
+import { Col, ProgressBar, Card } from "react-bootstrap";
 import { FaBookOpen } from "react-icons/fa";
 import { TbGeometry } from "react-icons/tb";
-import { Card } from 'react-bootstrap'
 
 function CardContent() {
   return (
-    <div>
-      <Card className="dashboard-card myCard">
+    <Col xs={12} md={6} lg={4}>
+      <Card className="shadow-sm border-0 rounded-4 h-100">
         <Card.Body>
-          <Card.Title className="section-title myTitle">
-            Today's Schedule
-          </Card.Title>
-          <div className="schedule-item">
-            <div className="icon-circle bg-primary-subtle">
+          <Card.Title className="fw-semibold mb-4">Today's Schedule</Card.Title>
+
+          {/* Geometry Schedule Item */}
+          <div className="d-flex align-items-center gap-3 mb-3">
+            <div
+              className="bg-primary bg-opacity-25 d-flex justify-content-center align-items-center rounded-circle"
+              style={{ width: "40px", height: "40px" }}
+            >
               <TbGeometry className="text-primary" />
             </div>
             <div>
-              <div className="item-title myText">Geometry</div>
-              <div className="item-subtext">10:00 AM</div>
+              <div className="fw-semibold">Geometry</div>
+              <div className="text-muted small">10:00 AM</div>
             </div>
           </div>
-          <ProgressBar now={30} variant="primary" className="mb-3" />
-          <div className="schedule-item">
-            <div className="icon-circle bg-info-subtle">
+          <ProgressBar now={30} variant="primary" className="mb-4" />
+
+          {/* Physics Schedule Item */}
+          <div className="d-flex align-items-center gap-3 mb-3">
+            <div
+              className="bg-info bg-opacity-25 d-flex justify-content-center align-items-center rounded-circle"
+              style={{ width: "40px", height: "40px" }}
+            >
               <FaBookOpen className="text-info" />
             </div>
             <div>
-              <div className="item-title">Physics</div>
-              <div className="item-subtext">1:00 PM</div>
+              <div className="fw-semibold">Physics</div>
+              <div className="text-muted small">1:00 PM</div>
             </div>
           </div>
           <ProgressBar now={50} variant="info" />
         </Card.Body>
       </Card>
-    </div>
+    </Col>
   );
 }
 

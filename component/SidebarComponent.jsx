@@ -4,11 +4,6 @@ import { MdSchool } from "react-icons/md";
 import SidebarMenuItem from "./SidebarMuneItem";
 
 const SidebarComponent = () => {
-  const [openMenu, setOpenMenu] = useState(null);
-
-  const toggleMenu = (menuName) => {
-    setOpenMenu(openMenu === menuName ? null : menuName);
-  };
 
   return (
     <div style={{ width: "250px", backgroundColor: "white" }}>

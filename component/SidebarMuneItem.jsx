@@ -4,7 +4,7 @@ import { Collapse } from "react-bootstrap"; // ✅ Import Collapse
 import { FaBell, FaChevronDown, FaChevronRight, FaHome } from "react-icons/fa"; // ✅ Add FaHome
 import SubMenu from "./SidebarSubMenu";
 
-const SidebarMenuItem= () => {
+const SidebarMenuItem = () => {
   const [openMenu, setOpenMenu] = useState(null);
 
   const toggleMenu = (menuName) => {
@@ -42,9 +42,11 @@ const SidebarMenuItem= () => {
         </span>
       </div>
 
-      <Collapse in={openMenu === "dashboard"}>
-        <SubMenu/>
-      </Collapse>
+      {openMenu === "dashboard" && (
+        <Collapse in={true}>
+          <SubMenu />
+        </Collapse>
+      )}
 
       {/* Add more menus similarly */}
     </div>

@@ -8,15 +8,14 @@ import Dashboard from '../component/AdminDashBoard'
 import Dashboard2 from '../component/AdminDashBoard2'
 import Dashboard3 from '../component/AdminDashBoard3'
 import TeacherDashboard from '../component/TeacherDashBoard'
-import DashboardLayout from '../component/Example'
+import DashboardFinal from '../component/TeacherDashboardFinal'
 
 function App() {
 
   return (
     <>
-      {/* <Dashboard/> */}
-      {/* <TeacherDashboard/> */}
-      <DashboardLayout/>
+      <DashboardFinal/>
+      
     </>
   )
 }
